@@ -110,7 +110,7 @@ window.addEventListener('load', function () {
             var centerX = canvas.width / 2;
             var centerY = canvas.height / 2;
             var radius = 150;
-            var scalingFactor = 1.4; // scaling factor, bigger values will be 
+            var scalingFactor = 1.1; // scaling factor, bigger values will be 
 
             canvasCtx.lineWidth = 2;
             canvasCtx.beginPath();
@@ -118,8 +118,8 @@ window.addEventListener('load', function () {
             for (var i = 0; i < bars; i++) {
                 var barHeight = frequencyData[i] / 255 * radius;
                 var radians = i * barWidth;
-                var x = centerX + Math.cos(radians - Math.PI / 2) * radius;
-                var y = centerY + Math.sin(radians - Math.PI / 2) * radius;
+                var x = centerX + Math.cos(radians - Math.PI / 2) * radius * scalingFactor;
+                var y = centerY + Math.sin(radians - Math.PI / 2) * radius * scalingFactor;;
 
                 var x2 = centerX + Math.cos(radians - Math.PI / 2) * ((barHeight + radius) * scalingFactor);
                 var y2 = centerY + Math.sin(radians - Math.PI / 2) * ((barHeight + radius) * scalingFactor);
