@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Audio Visualizer</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=7">
   </head>
   <body>
     <header>
@@ -21,16 +21,18 @@
           <button id="style2">Style 2</button>
           <button id="style3">Style 3</button>
       </div>
+      <canvas id="visualizer-canvas"></canvas>
       <div class="audio-container">
         <audio id="audio-player" controls>
           <source src="" type="audio/mpeg">
         </audio>
       </div>
-      <canvas id="visualizer-canvas"></canvas>
+      <div class = "user-control">
+        <label>Adjust hue</label>
+        <input type="range" min="0" max="360" value="0" id="hue-slider">
+        <button id="auto-pan" class="">Auto Pan</button>
+      </div>
     </main>
-    <footer>
-      <p>Copyright 2023 @ ScrumMasters</p>
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>
